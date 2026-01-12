@@ -1,0 +1,30 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #d4af37;
+}
+
+.logo {
+    width: 200px;
+}
+
+li {
+    display: inline-block;
+    margin: 10px;
+    
+}
+
+.navbar {
+color: #f2a1b3;
+}
+
+h1 {
+    color: #d4af37;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+    
+}
