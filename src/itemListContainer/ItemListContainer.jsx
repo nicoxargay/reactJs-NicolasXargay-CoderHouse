@@ -1,14 +1,27 @@
 
 import "./itemListContainer.css"
-import Contenedor from '../contenedor/Contenedor'
+import { useState, useEffect } from "react"
+import { getProductos, getProductosCategoria } from "../asyncmock"
+import ItemList from "../ItemList/ItemList"
+import { useParams } from "react-router-dom"
 
 const ItemListContainer = () => {
 
-  const bienvenida = "Bienvenido a mi pagina web de perfumeria"
+  const [productos, setProductos] = useState([])
 
+  const {idCategoria} = useParams()
+
+  useEffect(()=>{
+
+    const funcionProductos = idCategoria ? getProductosCategoria : getProductos
+
+    funcionProductos(idCategoria)
+    .then(res=> setProductos(res))
+  },[idCategoria]) 
   return (
     <>
-    <Contenedor mensaje={bienvenida}/>
+    <h2>Catalogo</h2>
+    <ItemList productos={productos}/>
     </>
   )
 }

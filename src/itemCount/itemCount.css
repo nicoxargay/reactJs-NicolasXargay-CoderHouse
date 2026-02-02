@@ -1,0 +1,67 @@
+.countCard {
+  background: #fff8fb;
+  border: 3px solid #d4af37;
+  border-radius: 14px;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  width: fit-content;
+}
+
+.countControls {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: #f9d6e1;
+  border: 2px solid #d4af37;
+  border-radius: 12px;
+  padding: 0.5rem 0.75rem;
+}
+
+.countBtn {
+  background: #f2a1b3;
+  color: #1f1f1f;
+  border: none;
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  font-weight: 800;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.countBtn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+}
+
+.countNumber {
+  min-width: 36px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #d4889d;
+}
+
+.detalleBoton {
+  align-self: stretch;
+  background-color: #d4af37;
+  color: #1f1f1f;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.detalleBoton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
