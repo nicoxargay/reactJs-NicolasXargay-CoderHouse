@@ -1,24 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Raleway:wght@300;400;500&display=swap");
+
+.card {
+    display: flex;
+    justify-content: center;
+}
+
 .cardProductos {
-    background-color: #f2a1b3;
-    border-radius: 10px;
-    border: #d4af37 solid 3px;
+    --rosa: #f2a1b3;
+    --rosa-oscuro: #e8849a;
+    --dorado: #d4af37;
+    --dorado-claro: #f0d060;
+    --crema: #fdf6ee;
+
+    background: linear-gradient(160deg, #fff5f8 0%, var(--crema) 100%);
+    border-radius: 16px;
+    border: 1.5px solid var(--dorado);
     width: 20rem;
-    padding: 1rem;
+    padding: 1.5rem 1.25rem 1.25rem;
     margin: 1rem;
     display: flex;
     flex-direction: column;
-    align-items:center;
+    align-items: center;
     text-align: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow:
+        0 4px 24px rgba(212, 175, 55, 0.12),
+        0 1px 4px rgba(212, 175, 55, 0.08);
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+    font-family: "Raleway", sans-serif;
+}
+
+.cardProductos::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 80px;
+    background: radial-gradient(circle at top left,
+            rgba(212, 175, 55, 0.18),
+            transparent 70%);
+    pointer-events: none;
+}
+
+.cardProductos::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 15%;
+    right: 15%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--dorado), transparent);
+}
+
+.cardProductos:hover {
+    transform: translateY(-6px);
+    box-shadow:
+        0 12px 36px rgba(212, 175, 55, 0.2),
+        0 4px 12px rgba(242, 161, 179, 0.25);
+}
+
+.cardProductos .img-wrapper {
+    background: radial-gradient(ellipse at center,
+            rgba(242, 161, 179, 0.2) 0%,
+            transparent 70%);
+    border-radius: 50%;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .cardProductos img {
-    width: 150px;
+    width: 130px;
+    height: 130px;
     object-fit: contain;
+    filter: drop-shadow(0 4px 12px rgba(212, 175, 55, 0.3));
+    transition: transform 0.4s ease;
+}
+
+.cardProductos:hover img {
+    transform: scale(1.06);
+}
+
+.cardProductos h3:first-of-type {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #3a2a2a;
+    margin: 0.4rem 0 0.2rem;
+    letter-spacing: 0.03em;
+}
+
+.cardProductos h3:nth-of-type(2) {
+    font-family: "Raleway", sans-serif;
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: #8a6a00;
+    margin: 0 0 0.2rem;
+}
+
+.cardProductos h3:nth-of-type(3) {
+    font-size: 0.72rem;
+    font-weight: 400;
+    color: #b07a8a;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin: 0 0 1rem;
 }
 
 .cardProductos button {
-    background-color: #d4af37;
-    border-radius: 10px;
-    font-size: 1.05rem;
-    padding: 10px 20px;
+    background: linear-gradient(135deg,
+            var(--dorado) 0%,
+            var(--dorado-claro) 50%,
+            var(--dorado) 100%);
+    background-size: 200% auto;
+    border: none;
+    border-radius: 8px;
+    font-family: "Raleway", sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #3a2a00;
+    padding: 10px 24px;
+    cursor: pointer;
+    transition:
+        background-position 0.4s ease,
+        box-shadow 0.3s ease,
+        transform 0.2s;
+    box-shadow: 0 2px 8px rgba(212, 175, 55, 0.35);
+    margin-top: auto;
+}
+
+.cardProductos button:hover {
+    background-position: right center;
+    box-shadow: 0 4px 16px rgba(212, 175, 55, 0.5);
+    transform: scale(1.03);
+}
+
+.cardProductos button:active {
+    transform: scale(0.98);
 }

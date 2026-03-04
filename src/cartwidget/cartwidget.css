@@ -1,4 +1,18 @@
 .carrito {
+    font-size: 1.7rem;
     width: 100px;
     display: inline-block;
+}
+
+@media (max-width: 768px) {
+    .carrito {
+        width: 20px;
+        height: 20px;
+    }
+
+    strong {
+        width: 14px;
+        height: 14px;
+        font-size: 0.6rem;
+    }
 }

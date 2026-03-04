@@ -1,16 +1,57 @@
-# React + Vite
+# 🌸 Nx Perfumerie
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+E-commerce de perfumes desarrollado como proyecto final de curso. Permite explorar un catálogo de fragancias, agregar productos al carrito y completar una orden de compra.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Demo
 
-## React Compiler
+> Podés correr el proyecto localmente siguiendo los pasos de instalación.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Tecnologías
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+| Tecnología | Uso |
+|---|---|
+| [React 19](https://react.dev/) | Biblioteca principal de UI |
+| [Vite 7](https://vitejs.dev/) | Bundler y entorno de desarrollo |
+| [React Router DOM 7](https://reactrouter.com/) | Navegación entre páginas |
+| [Firebase 12](https://firebase.google.com/) | Base de datos (Firestore) y backend |
+
+---
+
+## ✨ Features
+
+- 🗂️ Catálogo de productos con filtro por categoría (Masculino, Femenino, Unisex)
+- 🔍 Página de detalle por producto
+- 🛒 Carrito de compras con agregar, eliminar y vaciar productos
+- 💳 Checkout con formulario de datos y validación
+- 📦 Generación de orden de compra guardada en Firestore
+- 📱 Diseño responsive con menú hamburguesa en mobile
+
+---
+
+## 📁 Estructura del proyecto
+
+```
+src/
+├── Cart/               # Componente carrito
+├── CartItem/           # Item individual del carrito
+├── CartWidget/         # Ícono del carrito en el navbar
+├── Checkout/           # Formulario de compra
+├── context/            # CarritoContext (estado global)
+├── Item/               # Card de producto
+├── ItemCount/          # Selector de cantidad
+├── ItemDetail/         # Detalle de producto
+├── ItemDetailContainer/
+├── itemListContainer/  # Listado de productos
+├── navbar/             # Navegación
+└── service/            # Configuración Firebase
+```
+
+---
+
+## 📚 Curso
+
+Proyecto desarrollado como entrega final del curso de **React JS** en [Coderhouse](https://www.coderhouse.com/).

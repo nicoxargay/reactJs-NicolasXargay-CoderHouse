@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Raleway:wght@300;400;500;600&display=swap');
+
+.checkoutWrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  background: linear-gradient(160deg, #fff8f2 0%, #fdf6ee 100%);
+  font-family: 'Raleway', sans-serif;
+}
+
+.checkoutCard {
+  background: #ffffff;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 20px;
+  width: 100%;
+  max-width: 520px;
+  overflow: hidden;
+  box-shadow:
+    0 8px 40px rgba(212, 175, 55, 0.12),
+    0 2px 8px rgba(242, 161, 179, 0.1);
+}
+
+.checkoutHeader {
+  background: linear-gradient(135deg, #fdf6ee 0%, #fff5f0 100%);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+  padding: 2rem 2rem 1.5rem;
+  text-align: center;
+  position: relative;
+}
+
+.checkoutHeader::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 15%; right: 15%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #d4af37, transparent);
+}
+
+.checkoutTitulo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.9rem;
+  font-weight: 300;
+  font-style: italic;
+  color: #d4af37;
+  margin: 0 0 0.2rem;
+  letter-spacing: 0.06em;
+}
+
+.checkoutSubtitulo {
+  font-size: 0.7rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #c9a0b0;
+  margin: 0;
+}
+
+.checkoutResumen {
+  padding: 1.5rem 2rem 0;
+}
+
+.checkoutResumenTitulo {
+  font-size: 0.65rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #c9a0b0;
+  margin: 0 0 0.75rem;
+}
+
+.checkoutProducto {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px dashed rgba(212, 175, 55, 0.2);
+}
+
+.checkoutProducto:last-of-type {
+  border-bottom: none;
+}
+
+.checkoutProductoNombre {
+  font-size: 0.85rem;
+  color: #3a2a2a;
+  font-weight: 500;
+}
+
+.checkoutProductoCantidad {
+  font-size: 0.75rem;
+  color: #c9a0b0;
+  margin-left: 0.5rem;
+}
+
+.checkoutProductoPrecio {
+  font-size: 0.85rem;
+  color: #8a6a00;
+  font-weight: 600;
+}
+
+.checkoutTotalRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0 0;
+  margin-top: 0.5rem;
+  border-top: 1px solid rgba(212, 175, 55, 0.25);
+}
+
+.checkoutTotalLabel {
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #a07080;
+}
+
+.checkoutTotalValor {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #d4af37;
+}
+
+
+.checkoutSeparador {
+  height: 1px;
+  margin: 1.5rem 2rem;
+  background: linear-gradient(90deg, transparent, rgba(212,175,55,0.4), transparent);
+}
+
+
+.checkoutFormulario {
+  padding: 0 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.checkoutFormTitulo {
+  font-size: 0.65rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #c9a0b0;
+  margin: 0 0 0.25rem;
+}
+
+.checkoutCampo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.checkoutCampo label {
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #a07080;
+  font-weight: 500;
+}
+
+.checkoutCampo input {
+  background: #fdf9f5;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.88rem;
+  color: #3a2a2a;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.checkoutCampo input:focus {
+  border-color: #d4af37;
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+}
+
+.checkoutCampo input::placeholder {
+  color: #d4b8c0;
+  font-size: 0.82rem;
+}
+
+
+.checkoutFila {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.checkoutError {
+  background: rgba(242, 100, 120, 0.08);
+  border: 1px solid rgba(242, 100, 120, 0.3);
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 0.8rem;
+  color: #c0405a;
+  text-align: center;
+}
+
+.btnConfirmar {
+  width: 100%;
+  background: linear-gradient(135deg, #d4af37 0%, #f0d060 50%, #d4af37 100%);
+  background-size: 200% auto;
+  border: none;
+  border-radius: 10px;
+  padding: 14px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #3a2a00;
+  cursor: pointer;
+  transition: background-position 0.4s ease, box-shadow 0.3s ease, transform 0.15s;
+  box-shadow: 0 2px 12px rgba(212, 175, 55, 0.35);
+  margin-top: 0.5rem;
+}
+
+.btnConfirmar:hover {
+  background-position: right center;
+  box-shadow: 0 4px 20px rgba(212, 175, 55, 0.5);
+  transform: translateY(-1px);
+}
+
+.btnConfirmar:active {
+  transform: translateY(0);
+}
+
+
+.checkoutExito {
+  text-align: center;
+  padding: 1.5rem 2rem 2rem;
+}
+
+.checkoutExitoIcono {
+  font-size: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.checkoutExitoTexto {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem;
+  font-style: italic;
+  color: #3a2a2a;
+  margin: 0 0 0.5rem;
+}
+
+.checkoutExitoOrden {
+  font-size: 0.72rem;
+  color: #a07080;
+  letter-spacing: 0.06em;
+}
+
+.checkoutExitoOrden span {
+  color: #d4af37;
+  font-weight: 600;
+}
