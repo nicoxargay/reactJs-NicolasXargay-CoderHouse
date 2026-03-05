@@ -10,7 +10,7 @@ const NavBar = () => {
     <>
       <header>
         <Link to="/">
-          <img src="./assets/logo.png" alt="Logo de la marca" className="logo" />
+          <img src="/assets/logo.png" alt="Logo de la marca" className="logo" />
         </Link>
 
         <h1>Nx Perfumerie</h1>
