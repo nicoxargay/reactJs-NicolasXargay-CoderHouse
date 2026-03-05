@@ -10,6 +10,12 @@ E-commerce de perfumes desarrollado como proyecto final de curso. Permite explor
 
 ---
 
+## 🌐 Dominio
+
+🔗 [https://nxperfumerie.vercel.app](https://nxperfumerie.vercel.app)
+
+---
+
 ## 🛠️ Tecnologías
 
 | Tecnología | Uso |
@@ -49,7 +55,6 @@ src/
 ├── navbar/             # Navegación
 └── service/            # Configuración Firebase
 ```
-
 ---
 
 ## 📚 Curso

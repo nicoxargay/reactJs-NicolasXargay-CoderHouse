@@ -21,13 +21,6 @@ useEffect(() => {
   .catch(error=> console.log(error))
 }, [idItem])
 
-  // useEffect(() => {
-  //   if (!idItem) return
-
-  //   getUnProducto(Number(idItem)).then((respuesta) => setProducto(respuesta))
-  // }, [idItem])
-
-  // if (!producto) return <p>Cargando...</p>
 
   return (
     <>
